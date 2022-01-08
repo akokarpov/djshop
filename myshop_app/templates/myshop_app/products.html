@@ -1,0 +1,19 @@
+
+{% extends 'myshop_app/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<h1>{{ template_title }}</h1>
+<div class="products-container">
+    {% for product in products %}
+    <div class="product-container">
+        <a href="{% url 'myshop_app:products' %}{{product.id}}"><h3>{{ product.title }}</h3></a>
+        <a href="{% url 'myshop_app:products' %}{{product.id}}"><img src="{% static 'myshop_app/img/thumbnails/' %}{{ product.image }}" height="200" width="200" alt="{{ product.image }}"></a>
+        <p>{{ product.price }} &#8381;</p>
+        <input type="submit" value="Buy">
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

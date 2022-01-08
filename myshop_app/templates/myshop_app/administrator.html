@@ -1,0 +1,31 @@
+{% extends 'myshop_app/base.html' %}
+{% block content %}
+<h1>Admin</h1>
+<form action="{% url 'myshop_app:administrator' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <h3>Add new product:</h3>
+        <tr>
+            <td>Title:</td>
+            <td>{{ form.title }}</td>
+        </tr>
+        <tr>
+            <td>Specs:</td>
+            <td>{{ form.specs }}</td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td>{{ form.price }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form.image.as_hidden }}</td>
+        </tr>
+        <tr>
+            <td>File:</td>
+            <td>{{ form.file }}</td>
+        </tr>
+    </table>
+    <button name='submit'>Add new product</button>
+</form>
+{% endblock content %}

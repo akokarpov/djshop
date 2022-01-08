@@ -1,0 +1,15 @@
+
+{% extends 'myshop_app/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<h1>{{ product.title }}</h1>
+<div class="product-container">
+    <a href="{% static 'myshop_app/img/originals/' %}{{ product.image }}"><img src="{% static 'myshop_app/img/thumbnails/' %}{{ product.image }}" height="200" width="200" alt="{{ product.image }}"></a>
+    <p>{{ product.specs }}</p>
+    <p>{{ product.price }} &#8381;</p>
+    <input type="submit" value="Buy">
+</div>
+
+{% endblock content %}
