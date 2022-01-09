@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'myshop_app/css/stylesheet.css' %}">
-    <title>{{ template_title }}</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <title>{{ page_title }}</title>
 </head>
-
-<header>
-    <div class="menu-div">
-        <ul>
-            <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:index' %}">About</a></li>
-            <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:products' %}">Products</a></li>
-            <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:cart' %}">Cart</a></li>
-            <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:auth' %}">Login</a></li>
-            <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:administrator' %}">Admin</a></li>
-        </ul>
-    </div>
-</header>
-
 <body>
+    <header>
+        <div class="menu-div">
+            <ul>
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:index' %}">About</a></li>
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:products' %}">Products</a></li>
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:cart' %}">Cart</a></li>
+                {% if user.is_staff %}
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'myshop_app:administrator' %}">Admin</a></li>
+                {% endif %}
+                {% if user.is_authenticated%}
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'users_app:logout' %}">Logout({{ user.get_short_name }})</a></li>
+                {% else %}
+                <li class="menu-item-li"><a class="menu-item-a" href="{% url 'users_app:login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    <h1>{{ page_title }}</h1>
     {% block content %}
     {% endblock content %}
 </body>
