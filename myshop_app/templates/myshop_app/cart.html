@@ -1,4 +1,59 @@
 {% extends 'myshop_app/base.html' %}
 {% block content %}
-<p>Cart...</p>
+
+{% if cart_items %}
+<h3>Selected items:</h3>
+<form method="post" id="cart-form">
+{% csrf_token %}
+<table class="cart-table">
+<tr>
+    <th class="cart-table-th">No.</th>
+    <th class="cart-table-th">Product</th>
+    <th class="cart-table-th">Qty.</th>
+    <th class="cart-table-th">Price</th>
+    <th class="cart-table-th">Total</th>
+    <th class="cart-table-th">Delete</th>
+</tr>
+{% for item in cart_items %}
+<tr>
+    <td class="cart-table-td">{{ item.id }}.</td>
+    <td class="cart-table-td"><a href="{% url 'myshop_app:products' %}{{item.product_id.id}}">{{ item.product_id }}</a></td>
+    <td class="cart-table-td"><input name='change_count' type="number" min='1' max='100' value="{{ item.count }}" style="width: 3em" id="{{ item.id }}"></td>
+    <td class="cart-table-td">{{ item.product_id.price }}</td>
+    <td class="cart-table-td" id="output-total{{ item.id }}">{{ item.total }}</td>
+    <td><input type="submit" name='del' id="{{ item.id }}" value="del"></td>    
+</tr>
+{% endfor %}
+</table>
+<p><strong>Grandtotal: </strong><span id="output-grandtotal">{{ grandtotal }}</span></p>
+<button type="submit">Finish your order</button>
+</form>
+{% else %}
+<h3>No items added here yet...</h3>
+{% endif %}
+
+<script>
+    arr = document.getElementsByName('change_count');
+    arr.forEach(cart_item => {
+       $(`#${cart_item.id}`).on('change', function(e){
+        e.preventDefault();
+          $.ajax({
+               type : "POST", 
+               url: "{% url 'myshop_app:cart' %}",
+               data: {
+                change_count: cart_item.value,
+                item_id: cart_item.id,
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                dataType: `json`,
+               },
+               success: function(data){
+                $(`#output-total${cart_item.id}`).html(data.total); 
+                $(`#output-grandtotal`).html(data.grandtotal);
+               },
+               failure: function() {
+               }
+           });
+        });
+    });     
+ </script>
 {% endblock content %}

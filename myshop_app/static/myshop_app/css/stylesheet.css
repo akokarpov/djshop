@@ -52,6 +52,10 @@ a {
 	color: black;
 }
 
+.menu-div {
+	background-color: rgb(92, 92, 92);
+}
+
 .products-container {
 	display: flex;
 }
@@ -64,7 +68,33 @@ a {
     display: inline;
 }
 
-.menu-item-a:hover {
-	color: lightcoral;
-	text-decoration: underline;
+.menu-item-a {
+	color: lightgray;
 }
+
+.menu-item-a:hover {
+	background-color: gold;
+	color:black;
+}
+
+.menu-active {
+	font-weight: bold;
+	color: gold;
+}
+
+.cart-table {
+	border-collapse: collapse;
+}
+
+.cart-table-th {
+	border: 1px solid lightgray;
+	background-color: lightgray;
+	text-align: center;
+	padding: 2px;
+	}
+
+.cart-table-td {
+	border: 1px solid lightgray;
+	text-align: left;
+	padding: 2px;
+  }

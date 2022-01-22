@@ -1,6 +1,6 @@
 {% extends 'myshop_app/base.html' %}
 {% block content %}
-<form action="{% url 'myshop_app:administrator' %}" method="post" enctype="multipart/form-data">
+<form action="{% url 'myshop_app:add_product' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
         <h3>Add new product:</h3>

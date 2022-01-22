@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bba66c20-6060-41b1-9a38-26ff7c3f43a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/static/myshop_app/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/static/myshop_app/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/templates/myshop_app/administrator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/templates/myshop_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/templates/myshop_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/templates/myshop_app/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/templates/myshop_app/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/templates/myshop_app/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/templates/myshop_app/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myshop_app/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23uewj0P9QPhK8yYaZ6o88CNqn8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bba66c20-6060-41b1-9a38-26ff7c3f43a2" name="Changes" comment="" />
+      <created>1642588642281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642588642281</updated>
+    </task>
+    <servers />
+  </component>
+</project>

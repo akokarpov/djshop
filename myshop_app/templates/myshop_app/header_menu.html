@@ -1,0 +1,15 @@
+{% load myshop_app_tags %}
+{% get_header_menu as header_menu %}
+
+<div class="menu-div">
+    <ul>
+    {% for item in header_menu %}
+    {% url item.url as url_name %}
+        {% if request.path == url_name %}
+            <li class="menu-item-li menu-active">{{ item.title }}</li>
+        {% else %}
+            <li class="menu-item-li"><a class="menu-item-a" href="{{ url_name }}">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
